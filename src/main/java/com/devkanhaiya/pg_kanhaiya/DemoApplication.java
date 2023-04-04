@@ -6,10 +6,14 @@ import com.devkanhaiya.pg_kanhaiya.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@ComponentScan("com.devkanhaiya.pg_kanhaiya")
 @RestController
 public class DemoApplication {
 
@@ -20,10 +24,11 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@GetMapping("count-users")
+	
+	@GetMapping(value="count-users")
 	public String getCountUsers(){
 		long numberUsers = userRepository.count();
-		return "Number of users = "+numberUsers;
+		return "user available is : "+numberUsers;
 	}
 
 	@GetMapping("add-user")
