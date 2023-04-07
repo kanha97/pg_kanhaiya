@@ -26,12 +26,12 @@ public class WebController {
 
 
 	@GetMapping("/login")
-	public ModelAndView getLoginPage(){
-		//long numberUsers = userRepository.count();
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("/login");
+	public String getLoginPage(){
+//		//long numberUsers = userRepository.count();
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("/login");
 
-		return modelAndView;
+		return "login";
 	}
 	
 
