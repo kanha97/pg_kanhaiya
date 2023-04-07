@@ -12,7 +12,7 @@
             white-space: nowrap;
         }
     </style>
-    <title>SFA Admin Panel | Add Product</title>
+    <title>KRC Admin Panel | Add Member</title>
     <!-- App favicon -->
     <link rel="icon" href="${pageContext.request.contextPath }/resources/images/logo.png">
     <!--Morris Chart CSS -->
