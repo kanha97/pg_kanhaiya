@@ -28,9 +28,6 @@ public class WebController {
 
 	@GetMapping(value="/login")
 	public String getLoginPage(){
-//		//long numberUsers = userRepository.count();
-//		ModelAndView modelAndView = new ModelAndView();
-//		modelAndView.setViewName("/login");
 
 		return "I am Login";
 	}
