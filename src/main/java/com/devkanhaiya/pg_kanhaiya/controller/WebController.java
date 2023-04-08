@@ -31,7 +31,7 @@ public class WebController {
 //		ModelAndView modelAndView = new ModelAndView();
 //		modelAndView.setViewName("/login");
 
-		return "login";
+		return "I am Login";
 	}
 	
 
