@@ -26,10 +26,10 @@ public class WebController {
 
 
 
-	@GetMapping(value="/login")
+	@RequestMapping(value="/login")
 	public String getLoginPage(){
 
-		return "I am Login";
+		return "login";
 	}
 	
 
