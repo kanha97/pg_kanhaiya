@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("/KRC")
 public class WebController {
 
 	@Autowired
@@ -25,7 +26,7 @@ public class WebController {
 
 
 
-	@GetMapping("/login")
+	@GetMapping(value="/login")
 	public String getLoginPage(){
 //		//long numberUsers = userRepository.count();
 //		ModelAndView modelAndView = new ModelAndView();
