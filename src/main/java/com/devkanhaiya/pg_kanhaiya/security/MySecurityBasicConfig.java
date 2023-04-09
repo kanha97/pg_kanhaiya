@@ -26,12 +26,12 @@ public class MySecurityBasicConfig extends WebSecurityConfigurerAdapter {
          
          http
              .authorizeRequests()
-             .antMatchers("/KRC/**").permitAll()
+             .antMatchers("/krc/**").permitAll()
              .antMatchers("/api/**").permitAll()
              .antMatchers("/resources/**","static/**").permitAll()
              .anyRequest().authenticated()
              .and()
-             .formLogin().loginPage("/KRC/login").loginProcessingUrl("/authenticateUser")
+             .formLogin().loginPage("/krc/login").loginProcessingUrl("/authenticateUser")
              .permitAll();
      }
 	

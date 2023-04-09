@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/KRC")
+@RequestMapping("/krc")
 public class WebController {
 
 	@Autowired
