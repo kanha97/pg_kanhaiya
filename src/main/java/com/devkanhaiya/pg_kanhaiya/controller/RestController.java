@@ -14,7 +14,7 @@ public class RestController {
 	UserRepository userRepository;
 
 
-	@RequestMapping(value="/login")
+	@RequestMapping(value="/LOGIN")
 	public ResponseEntity<Object>  getLoginPage(){
 
 		return ResponseEntity.ok(userRepository.findAll());
