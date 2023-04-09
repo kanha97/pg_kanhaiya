@@ -26,7 +26,8 @@ public class MySecurityBasicConfig extends WebSecurityConfigurerAdapter {
          
          http
              .authorizeRequests()
-             .antMatchers("/KRC/add").permitAll()
+             .antMatchers("/KRC/**").permitAll()
+             .antMatchers("/api/**").permitAll()
              .antMatchers("/resources/**","static/**").permitAll()
              .anyRequest().authenticated()
              .and()
