@@ -24,15 +24,14 @@ public class MySecurityBasicConfig extends WebSecurityConfigurerAdapter {
 	 @Override
      protected void configure(HttpSecurity http) throws Exception {
          
-         http
-             .authorizeRequests()
-             .antMatchers("/krc/**").permitAll()
-             .antMatchers("/api/**").permitAll()
-             .antMatchers("/resources/**","static/**").permitAll()
-             .anyRequest().authenticated()
-             .and()
-             .formLogin().loginPage("/krc/login").loginProcessingUrl("/authenticateUser")
-             .permitAll();
+         http.authorizeRequests()
+         .antMatchers("/ping**")
+         .permitAll()
+         .and()
+ .authorizeRequests()
+         .anyRequest()
+         .authenticated()
+         .and();
      }
 	
 	 

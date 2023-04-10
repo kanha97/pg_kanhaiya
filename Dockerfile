@@ -9,7 +9,7 @@ RUN mvn clean package -DskipTests
 # Package stage
 #
 FROM openjdk:11-jdk-slim
-COPY --from=build /target/pg_kanhaiya-0.0.1-SNAPSHOT.war demo.war
+COPY --from=build /target/pg_kanhaiya-0.0.1-SNAPSHOT.war demo.jar
 # ENV PORT=8080
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","demo.war"]
+ENTRYPOINT ["java","-jar","demo.jar"]

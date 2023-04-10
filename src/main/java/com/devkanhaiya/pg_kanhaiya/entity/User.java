@@ -1,10 +1,16 @@
 package com.devkanhaiya.pg_kanhaiya.entity;
 
 import javax.persistence.*;
+
+import org.springframework.lang.Nullable;
+
+import lombok.Data;
+
 import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
+@Data
 public class User implements Serializable {
 
     @Id
@@ -17,28 +23,117 @@ public class User implements Serializable {
 
     @Column(name = "last_name", length = 50)
     private String lastName;
+    
 
-    public Long getId() {
-        return id;
-    }
+    @Column(name = "type")
+    private String type;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Column(name = "room_no", length = 50)
+    @Nullable
+    private String roomNumber;
+    
 
-    public String getFirstName() {
-        return firstName;
-    }
+    @Column(name = "bed")
+    private String bed;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    @Column(name = "address", length = 50)
+    @Nullable
+    private String address;
+    
 
-    public String getLastName() {
-        return lastName;
-    }
+    @Column(name = "image", length = 50)
+    @Nullable
+    private String image;
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+
+    @Nullable
+    private String mobileNumber;
+
+   
+    @Nullable
+    private String dateOfBirth;
+
+   
+    @Nullable
+    private String motherTongue;
+
+   
+    @Nullable
+    private String nationality;
+
+   
+    @Nullable
+    private String religion;
+
+   
+    @Nullable
+    private String fatherName;
+
+   
+    @Nullable
+    private String parentMobileNumber;
+
+   
+    @Nullable
+    private String bloodGroup;
+
+   
+    @Nullable
+    private String guardinaAddress;
+
+   
+    @Nullable
+    private String companyname;
+
+   
+    @Nullable
+    private String employeeNumber;
+
+   
+    @Nullable
+    private String officeAddress;
+
+   
+    @Nullable
+    private String officePhone;
+
+   
+    @Nullable
+    private String joiningDate;
+
+   
+    @Nullable
+    private String leavingDate;
+
+   
+    @Nullable
+    private String passport;
+
+   
+    @Nullable
+    private String addhar;
+
+   
+    @Nullable
+    private String drivinglicence;
+
+   
+    @Nullable
+    private String pan;
+
+   
+    @Nullable
+    private String registerDate;
+
+   
+    @Nullable
+    private String place;
+
+   
+    @Nullable
+    private String givenPayment;
+
+    @Nullable
+    private String sharing;
+
 }
