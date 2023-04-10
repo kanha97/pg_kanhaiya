@@ -1,21 +1,16 @@
 package com.devkanhaiya.pg_kanhaiya.controller;
 
 import com.devkanhaiya.pg_kanhaiya.entity.User;
-import com.devkanhaiya.pg_kanhaiya.model.AdminConstants;
 import com.devkanhaiya.pg_kanhaiya.model.AdminURLConstants;
 import com.devkanhaiya.pg_kanhaiya.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -84,7 +79,7 @@ public class WebController {
 
 
 	@GetMapping(AdminURLConstants.LIST)
-	public ModelAndView loadProductList() {
+	public ModelAndView loadProductList(ModelMap map) {
 
 		final ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName(AdminURLConstants.PRODUCT
