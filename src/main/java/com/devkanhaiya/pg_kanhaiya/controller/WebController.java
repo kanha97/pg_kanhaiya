@@ -29,7 +29,7 @@ public class WebController {
 
 	@RequestMapping(value="/login")
 	public String getLoginPage(ModelMap map){
-
+		System.out.println("Enter Login");
 		return "login";
 	}
 	
