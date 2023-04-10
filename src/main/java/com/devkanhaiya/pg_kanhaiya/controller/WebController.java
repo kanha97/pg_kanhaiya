@@ -27,10 +27,11 @@ public class WebController {
 		System.out.println("Enter Login");
 		return "login";
 	}
+	
 	@RequestMapping(value="/adduser")
 	public String addUserPage(ModelMap map){
 		System.out.println("Enter usser");
-		return "add";
+		return "product/add";
 	}
 	
 
