@@ -38,32 +38,9 @@ public class WebController {
 	
 
 	@RequestMapping(AdminURLConstants.ADD)
-	public ModelAndView saveOrUpdateProduct(
-			@ModelAttribute final User addEditProduct, BindingResult bindingResult) {
+	public ModelAndView saveOrUpdateProduct(ModelMap map) {
 		System.out.println("Enter Add");
 
-		if(bindingResult.hasFieldErrors()) {
-			ModelAndView modelAndView = new ModelAndView();
-			
-			modelAndView.addObject("name_error",bindingResult.getFieldError("name").getDefaultMessage());
-			modelAndView.addObject("retailerPrice_error",bindingResult.getFieldError("retailerPrice").getDefaultMessage());
-			modelAndView.addObject("maximumRetailPrice_error",bindingResult.getFieldError("maximumRetailPrice").getDefaultMessage());
-			modelAndView.addObject("distributorPrice_error",bindingResult.getFieldError("distributorPrice").getDefaultMessage());
-			modelAndView.addObject("orgWeight_error",bindingResult.getFieldError("orgWeight").getDefaultMessage());
-			modelAndView.addObject("unit_error",bindingResult.getFieldError("unit").getDefaultMessage());
-			modelAndView.addObject("weight_error",bindingResult.getFieldError("weight").getDefaultMessage());
-			modelAndView.addObject("packSize_error",bindingResult.getFieldError("packSize").getDefaultMessage());
-			modelAndView.addObject("cartonNo_error",bindingResult.getFieldError("cartonNo").getDefaultMessage());
-			modelAndView.addObject("packagingType_error",bindingResult.getFieldError("packagingType").getDefaultMessage());
-			modelAndView.addObject("productId_error",bindingResult.getFieldError("productId").getDefaultMessage());
-			modelAndView.addObject("plant_error",bindingResult.getFieldError("plant").getDefaultMessage());
-			
-			modelAndView.setViewName(AdminURLConstants.PRODUCT
-					+ AdminURLConstants.ADD);
-
-			return modelAndView;
-		}
-		
 		ModelAndView mav = new ModelAndView();
 
 		mav.setViewName(AdminURLConstants.PRODUCT
