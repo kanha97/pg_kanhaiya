@@ -33,7 +33,7 @@ public class User implements Serializable {
     @Nullable
     private String roomNumber;
     
-
+    @Nullable
     @Column(name = "bed")
     private String bed;
 
@@ -136,5 +136,13 @@ public class User implements Serializable {
 
     @Nullable
     private String sharing;
+    
+
+    @Nullable
+    private String token;
+    
+
+    @Nullable
+    private String password;
 
 }
