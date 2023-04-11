@@ -1,12 +1,13 @@
 package com.devkanhaiya.pg_kanhaiya.entity;
 
-import javax.persistence.*;
 
 import org.springframework.lang.Nullable;
 
 import lombok.Data;
 
 import java.io.Serializable;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "users")

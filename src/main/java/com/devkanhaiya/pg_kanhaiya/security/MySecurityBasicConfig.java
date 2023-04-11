@@ -24,14 +24,8 @@ public class MySecurityBasicConfig extends WebSecurityConfigurerAdapter {
 	 @Override
      protected void configure(HttpSecurity http) throws Exception {
          
-         http.authorizeRequests()
-         .antMatchers("/ping**")
-         .permitAll()
-         .and()
- .authorizeRequests()
-         .anyRequest()
-         .authenticated()
-         .and();
+		 http.authorizeRequests().antMatchers("/**").permitAll();
+
      }
 	
 	 
@@ -47,11 +41,6 @@ public class MySecurityBasicConfig extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder(10);
 	}
 	
-
-	   @Override
-	   public void configure(WebSecurity web) throws Exception {
-	       web.ignoring().antMatchers("/resources/**");
-	   }
 }
 
 

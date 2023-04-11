@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.devkanhaiya.pg_kanhaiya.repository.UserRepository;
 
 @org.springframework.web.bind.annotation.RestController
-@RequestMapping("/api")
+@RequestMapping("/apis")
 public class RestController {
 
 	@Autowired
